@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -eo pipefail
+
+BUF_SHORT_PATH=@@BUF_SHORT_PATH@@
+ARGS=@@ARGS@@
+
+DIRECTORY="$(pwd -P)"
+NEW_PATH="${DIRECTORY}/external/com_github_zbiljic_bazel_tools_buf:${PATH}"
+
+buf_short_path=$(readlink "${BUF_SHORT_PATH}")
+CURDIR="${BUILD_WORKSPACE_DIRECTORY}"
+cd "${CURDIR}"
+
+/usr/bin/env \
+    -i \
+    PATH="${NEW_PATH}"\
+    PWD="${CURDIR}"\
+    "${buf_short_path}"\
+    "$@" "${ARGS[@]}"
