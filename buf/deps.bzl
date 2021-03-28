@@ -9,10 +9,10 @@ _PREFIX = (
     "buf/bin"
 )
 
-_VERSION = "0.35.1"
+_VERSION = "0.40.0"
 _CHECKSUMS = {
-    "Linux-x86_64": "c8ec48056319a890874f3d132b0c5747d68d50c84a5d77c5ba931cc49a153e28",
-    "Darwin-x86_64": "22f15fa4d9cf75ee413a4eeec4dca7030e8e2c6215430d2d47570162bdc8023f",
+    "Linux-x86_64": "748dc1bee8088580545e869e7855c51740449347a50b66dd1f89cb65a371d0f7",
+    "Darwin-x86_64": "88e1e3712a74d919997cab7b584dcbbbd496785588bcd802abccef1efa5d1904",
 }
 
 def _buf_download_impl(ctx):
